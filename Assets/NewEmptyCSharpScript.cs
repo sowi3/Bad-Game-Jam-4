@@ -16,14 +16,14 @@ public class  GameLoop : MonoBehaviour
     }
 
     private void InflictOutcome() {
-        if (IsPlayerAdvantageous()) { DamageBro(); } else { DamagePlayer(); }
+        if (IsPlayerAdvantageous()) { print("bro took damage"); } else { print("player took damage"); }
     }
 
     private bool IsPlayerAdvantageous() {
         // quick event calll
         // calls quick event
         // actually it calls the quick event if the gfesturem  is kquiuck event calling wworthy
-        if (broAction == Gesture.Gun) { qucikkkEvnbt(); }
+        if (broAction == Gesture.Gun) { print("trigger quick action"); }
         else
         {
             switch (playerAction)
@@ -40,11 +40,14 @@ public class  GameLoop : MonoBehaviour
                 case Gesture.MiddleFinger:
                     // bro is sad and hates you
                     Application.Quit();
+                    break;
                 case Gesture.Gun:
                     // bro is- SHUT UP SHU*T UP I WIN
-                    Application.Win();
+                    Debug.Log("your did it");
+                    break;
                 default:
                     Application.Quit();
+                    break;
             }
         }
         return false;
