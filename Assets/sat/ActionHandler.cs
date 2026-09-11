@@ -1,6 +1,6 @@
 using System.IO.Compression;
 using UnityEngine;
-public class  GameLoop : MonoBehaviour
+public class  ActionHandler : MonoBehaviour
 {
     Gesture playerAction;
     Gesture broAction;
