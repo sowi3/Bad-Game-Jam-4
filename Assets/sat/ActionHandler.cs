@@ -2,6 +2,7 @@ using UnityEngine;
 public class  ActionHandler : MonoBehaviour
 {
     public RendererOfGesture _renderGesture;
+    public RPSBattle RPSScript;
 
     Gesture playerAction;
     Gesture enemyAction;
@@ -22,7 +23,11 @@ public class  ActionHandler : MonoBehaviour
 
     private void EndTurn()
     {
+        RPSScript.MakeShit();
         enemyAction = EnemyDecide();
+    }
+
+    public void WhenShitHitsTheFan() {
         _renderGesture.RenderGesture(0, (int)playerAction);
         _renderGesture.RenderGesture(1, (int)enemyAction);
         InflictOutcome();

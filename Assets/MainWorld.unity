@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionHandler
   _renderGesture: {fileID: 514644287}
+  RPSScript: {fileID: 1282429610}
 --- !u!1 &273904184
 GameObject:
   m_ObjectHideFlags: 0

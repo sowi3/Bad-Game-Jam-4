@@ -11,8 +11,12 @@ public class RPSBattle : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instantiate(shit, transform);
         Instantiate(enemy, enemyAnchor.transform);
+    }
+
+    public void MakeShit() {
+        GameObject _shit = Instantiate(shit, transform);
+        Destroy(_shit, 2);
     }
 
     // Update is called once per frame
