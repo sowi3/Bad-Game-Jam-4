@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ed17d14ea46df40b4dc4b7a17257a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionHandler
-  _renderGesture: {fileID: 0}
+  _renderGesture: {fileID: 514644287}
 --- !u!1 &273904184
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +550,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339016974}
   m_CullTransparentMesh: 1
+--- !u!1001 &375236458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153319491153238438, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680574936731895744, guid: f280ee16813be5f44a60331b67921793, type: 3}
+      propertyPath: m_Name
+      value: SpellCastThe2ndDestroyerOfWorlds
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4715549922833556219, guid: f280ee16813be5f44a60331b67921793, type: 3}
+    - {fileID: 4793517413389531701, guid: f280ee16813be5f44a60331b67921793, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f280ee16813be5f44a60331b67921793, type: 3}
+--- !u!1 &375236459 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2332973918508064480, guid: f280ee16813be5f44a60331b67921793, type: 3}
+  m_PrefabInstance: {fileID: 375236458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &375236460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8895788334426204572, guid: f280ee16813be5f44a60331b67921793, type: 3}
+  m_PrefabInstance: {fileID: 375236458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &406053797
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +751,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406053797}
   m_CullTransparentMesh: 1
+--- !u!1 &514644286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 514644288}
+  - component: {fileID: 514644287}
+  m_Layer: 0
+  m_Name: RendererOfGesture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &514644287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514644286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388e475c7e7d2e642ac745703a47b6bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RendererOfGesture
+  enemySide: {fileID: 375236460}
+  playerSide: {fileID: 375236459}
+  MiddleFinger: {fileID: 6167212371124403090, guid: ea674e3e57bd61d4ca3269b019a9d795, type: 3}
+  Gun: {fileID: 4074209249795722497, guid: 98377e9994e8e32449c9bb8e71d15453, type: 3}
+  Rock: {fileID: 7577769850206755349, guid: 025e7fce34073a648b32daec89010a95, type: 3}
+  Paper: {fileID: 3592338777818326032, guid: b1325dfced8a3814ba1df508f2134601, type: 3}
+  Scissors: {fileID: 3218106429230431047, guid: 40279c4fe84687f47bfbf645cc1a44b9, type: 3}
+--- !u!4 &514644288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514644286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 426.90686, y: 213.2959, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &613818298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1610,8 @@ SceneRoots:
   - {fileID: 176955889}
   - {fileID: 1481595726}
   - {fileID: 1282429609}
+  - {fileID: 514644288}
+  - {fileID: 375236458}
   - {fileID: 870249206}
   - {fileID: 1986107087}
   - {fileID: 1484828066}
