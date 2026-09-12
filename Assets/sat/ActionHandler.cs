@@ -1,20 +1,32 @@
 using UnityEngine;
 public class  ActionHandler : MonoBehaviour
 {
+    public RendererOfGesture _renderGesture;
+
     Gesture playerAction;
     Gesture enemyAction;
-    
+
+    private void Start()
+    {
+        _renderGesture = FindAnyObjectByType<RendererOfGesture>();
+    }
+
+    // Display gestures and damage effects
+
     // Interface Begin
     public void OnGestureButtonPress(int action) {
         playerAction = (Gesture)action;
+        EndTurn();
     }
-    public void EndTurn()
+    // Interface End
+
+    private void EndTurn()
     {
         enemyAction = EnemyDecide();
+        _renderGesture.RenderGesture(0, (int)playerAction);
+        _renderGesture.RenderGesture(1, (int)enemyAction);
         InflictOutcome();
     }
-
-    // Interface End
 
     enum Gesture
     {
@@ -25,7 +37,14 @@ public class  ActionHandler : MonoBehaviour
         Gun,
     }
     private void InflictOutcome() {
-        if (IsPlayerAdvantageous()) { print("bro took damage"); } else { print("player took damage"); }
+        if (IsPlayerAdvantageous())
+        {
+            print("bro took damage");
+        }
+        else
+        {
+            print("player took damage");
+        }
     }
 
     private bool IsPlayerAdvantageous() {
@@ -33,6 +52,7 @@ public class  ActionHandler : MonoBehaviour
         // calls quick event
         // actually it calls the quick event if the gfesturem  is kquiuck event calling wworthy
         if (enemyAction == Gesture.Gun) { print("trigger quick action ecentr tune, respond to gun in time with middle finger"); }
+        // Currently if both players choose the same action bro takes damage, it should be a draw
         else
         {
             switch (playerAction)
@@ -52,7 +72,7 @@ public class  ActionHandler : MonoBehaviour
                     break;
                 case Gesture.Gun:
                     // bro is- SHUT UP SHU*T UP I WIN
-                    print("your did it");
+                    if (enemyAction == Gesture.MiddleFinger) { print("your failed to shoot him, no op"); break; } else { print("your did it"); }
                     break;
                 default:
                     Application.Quit();
@@ -66,6 +86,7 @@ public class  ActionHandler : MonoBehaviour
         // Fuckass function
         int decision = Random.Range(0, Gesture.GetNames(typeof(Gesture)).Length); 
         Gesture decisionGesture = (Gesture)decision;
+        print(decisionGesture);
         return decisionGesture;
     }
 }
