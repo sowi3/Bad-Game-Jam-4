@@ -5,10 +5,14 @@ using UnityEngine;
 public class RPSBattle : MonoBehaviour
 {
     public GameObject shit;
+    public GameObject enemy;
+    public GameObject enemyAnchor;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Instantiate(shit, transform);
+        Instantiate(enemy, enemyAnchor.transform);
     }
 
     // Update is called once per frame
@@ -23,7 +27,7 @@ public class RPSBattle : MonoBehaviour
     }
     public void ButtonClickEvent(int input)
     {
-        //這是一個測試函數，用來向朋友示範如何操作按鈕和介面。
+        //這是一個測試函數，用來向朋友示範如何操作按鈕和介面。What does this mean??
         Destroy(gameObject);
         Debug.Log(input);
     }

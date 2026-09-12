@@ -1472,6 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ed17d14ea46df40b4dc4b7a17257a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionHandler
+  _renderGesture: {fileID: 0}
 --- !u!1 &922644480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,7 +1789,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0f7e562659c2d43863cdbf3025ee3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RPSBattle
-  shit: {fileID: 4680574936731895744, guid: ade6f636cb0643c4f988253af472793d, type: 3}
+  shit: {fileID: 4680574936731895744, guid: f280ee16813be5f44a60331b67921793, type: 3}
+  enemy: {fileID: 5072293316885804716, guid: 73619d7ffde9de34b8cbc5eb34953ac7, type: 3}
+  enemyAnchor: {fileID: 2111197177}
 --- !u!1 &1378469214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,6 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8ed17d14ea46df40b4dc4b7a17257a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActionHandler
+  _renderGesture: {fileID: 0}
 --- !u!1 &1481595723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2437,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2111197177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2111197178}
+  m_Layer: 0
+  m_Name: EnemyAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2111197178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111197177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2, y: 3.12, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2442,3 +2477,4 @@ SceneRoots:
   - {fileID: 1282429609}
   - {fileID: 870249206}
   - {fileID: 1986107087}
+  - {fileID: 2111197178}
