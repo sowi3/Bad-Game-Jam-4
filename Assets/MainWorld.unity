@@ -1215,7 +1215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RPSBattle
   shit: {fileID: 4680574936731895744, guid: ade6f636cb0643c4f988253af472793d, type: 3}
-  enemy: {fileID: 4268896987486560535, guid: a2e2fe609a8324249b8b3162c60c4b40, type: 3}
+  enemies:
+  - {fileID: 5072293316885804716, guid: 73619d7ffde9de34b8cbc5eb34953ac7, type: 3}
+  - {fileID: 4268896987486560535, guid: a2e2fe609a8324249b8b3162c60c4b40, type: 3}
+  - {fileID: 1311553641282078999, guid: 342a1c307607edc4db15c8da7a9be3d9, type: 3}
   enemyAnchor: {fileID: 1484828065}
 --- !u!1 &1403511092
 GameObject:

@@ -5,18 +5,42 @@ using UnityEngine;
 public class RPSBattle : MonoBehaviour
 {
     public GameObject shit;
-    public GameObject enemy;
+    public GameObject[] enemies;
     public GameObject enemyAnchor;
+
+    GameObject _enemy;
+    int enemyHealth = 100;
+    int playerHealth = 100;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instantiate(enemy, enemyAnchor.transform);
+        NewBattle();
     }
 
+    // Battle Control
+    public void NewBattle() {
+        enemyHealth = 100;
+        playerHealth = 100;
+        _enemy = SpawnRandomEnemy();
+    }
+
+    public void EndBattle() {
+        Destroy(_enemy);
+   }
     public void MakeShit() {
         GameObject _shit = Instantiate(shit, transform);
         Destroy(_shit, 2);
+    }
+
+    // Actor Control
+
+    public void DamageBro(int value) {
+        enemyHealth -= value;
+    }
+
+    public void DamagePlayer(int value) {
+        playerHealth -= value;
     }
 
     // Update is called once per frame
@@ -29,10 +53,9 @@ public class RPSBattle : MonoBehaviour
     {
         
     }
-    public void ButtonClickEvent(int input)
-    {
-        //這是一個測試函數，用來向朋友示範如何操作按鈕和介面。What does this mean??
-        Destroy(gameObject);
-        Debug.Log(input);
+
+    GameObject SpawnRandomEnemy() {
+        int i = Random.Range(0, enemies.Length);
+        return Instantiate(enemies[i], enemyAnchor.transform);
     }
 }
