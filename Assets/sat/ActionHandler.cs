@@ -52,7 +52,7 @@ public class  ActionHandler : MonoBehaviour
                     break;
                 case Gesture.Gun:
                     // bro is- SHUT UP SHU*T UP I WIN
-                    print("your did it");
+                    if (enemyAction == Gesture.MiddleFinger) { print("your failed to shoot him, no op"); break; } else { print("your did it"); }
                     break;
                 default:
                     Application.Quit();
@@ -66,6 +66,7 @@ public class  ActionHandler : MonoBehaviour
         // Fuckass function
         int decision = Random.Range(0, Gesture.GetNames(typeof(Gesture)).Length); 
         Gesture decisionGesture = (Gesture)decision;
+        print(decisionGesture);
         return decisionGesture;
     }
 }
