@@ -56,7 +56,10 @@ public class  ActionHandler : MonoBehaviour
         // quick event calll
         // calls quick event
         // actually it calls the quick event if the gfesturem  is kquiuck event calling wworthy
-        if (enemyAction == Gesture.Gun) { print("trigger quick action ecentr tune, respond to gun in time with middle finger"); }
+        if (enemyAction == Gesture.Gun) {
+            if (playerAction == Gesture.Gun) { print("Begin Shootout"); }
+            print("trigger quick action ecentr tune, respond to gun in time with middle finger");
+        }
         // Currently if both players choose the same action bro takes damage, it should be a draw
         else
         {
