@@ -78,6 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be3ad351ff66d94fa1c5f95a3d3c88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  shitHandler: {fileID: 0}
+  CastingSound: {fileID: 6695185687785782582, guid: fd82e554f1418aa41811b784c2694cf5, type: 3}
 --- !u!1 &4715549922833556219
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,12 +162,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6752687263104640217, guid: ec844910949f03c4681e8e2af329ad5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec844910949f03c4681e8e2af329ad5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9, y: 0.94}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -275,12 +277,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6752687263104640217, guid: ec844910949f03c4681e8e2af329ad5c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec844910949f03c4681e8e2af329ad5c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9, y: 0.94}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
