@@ -430,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ActionHandler
   _renderGesture: {fileID: 514644287}
   RPSScript: {fileID: 1282429610}
-  QTE: {fileID: 0}
+  QTE: {fileID: 1723598543}
 --- !u!1 &273904184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,9 +1309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64153e96be4620e46911305859471d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QTEText
-  RPSScript: {fileID: 0}
-  boomer: {fileID: 0}
-  woosher: {fileID: 0}
+  RPSScript: {fileID: 1282429610}
+  boomer: {fileID: 164505189}
+  woosher: {fileID: 731287235}
 --- !u!1 &870249202
 GameObject:
   m_ObjectHideFlags: 0
