@@ -5,6 +5,7 @@ public class  ActionHandler : MonoBehaviour
 {
     public RendererOfGesture _renderGesture;
     public RPSBattle RPSScript;
+    public QTEText QTE;
 
     Gesture playerAction;
     Gesture enemyAction;
@@ -61,7 +62,7 @@ public class  ActionHandler : MonoBehaviour
         if (enemyAction == Gesture.Gun)
         {
             if (playerAction == Gesture.Gun) { RPSScript.BeginShootout(); }
-            else { print("trigger quick action ecentr tune, respond to gun in time with middle finger"); }
+            else { QTE.triggerQTE(); }
         }
         else
         {
