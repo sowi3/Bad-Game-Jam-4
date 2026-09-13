@@ -31,7 +31,7 @@ public class  ActionHandler : MonoBehaviour
     // Interface End
 
     // The IEnumerator
-    private int TheAmountOfSeconds = 4;
+    private float TheAmountOfSeconds = 5f;
     private IEnumerator TimerAndThenOpenAndCloseBracket() {
         yield return new WaitForSeconds(TheAmountOfSeconds);
         isCanThePlayerCastQuestionMark = true;
@@ -78,7 +78,7 @@ public class  ActionHandler : MonoBehaviour
                     ConcludeStage2(Gesture.Rock);
                     break;
                 case Gesture.MiddleFinger:
-                    Application.Quit();
+                    if (enemyAction == Gesture.MiddleFinger) { return; } else {Application.Quit(); }
                     break;
                 case Gesture.Gun:
                     if (enemyAction == Gesture.MiddleFinger) { return; } else { RPSScript.DamageBro(50); }
