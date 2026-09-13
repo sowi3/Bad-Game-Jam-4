@@ -27,6 +27,7 @@ public class RPSBattle : MonoBehaviour
 
     public void EndBattle() {
         Destroy(_enemy);
+        NewBattle();
    }
     public void MakeShit() {
         GameObject _shit = Instantiate(shit, transform);
@@ -37,10 +38,14 @@ public class RPSBattle : MonoBehaviour
 
     public void DamageBro(int value) {
         enemyHealth -= value;
+        print(enemyHealth);
+        if (enemyHealth <= 0) EndBattle();
     }
 
     public void DamagePlayer(int value) {
         playerHealth -= value;
+        print(playerHealth);
+        if (playerHealth <= 0) Application.Quit();
     }
 
     // Update is called once per frame
@@ -54,8 +59,14 @@ public class RPSBattle : MonoBehaviour
         
     }
 
+    int lastEnemy = 100;
     GameObject SpawnRandomEnemy() {
-        int i = Random.Range(0, enemies.Length);
+        int i = lastEnemy;
+        while (i == lastEnemy)
+        {
+            i = Random.Range(0, enemies.Length);
+        }
+        lastEnemy = i;
         return Instantiate(enemies[i], enemyAnchor.transform);
     }
 }

@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+
 public class  ActionHandler : MonoBehaviour
 {
     public RendererOfGesture _renderGesture;
@@ -6,6 +8,7 @@ public class  ActionHandler : MonoBehaviour
 
     Gesture playerAction;
     Gesture enemyAction;
+    bool isCanThePlayerCastQuestionMark = true;
 
     private void Start()
     {
@@ -16,10 +19,23 @@ public class  ActionHandler : MonoBehaviour
 
     // Interface Begin
     public void OnGestureButtonPress(int action) {
-        playerAction = (Gesture)action;
-        EndTurn();
+        if (isCanThePlayerCastQuestionMark)
+        {
+            playerAction = (Gesture)action;
+            EndTurn();
+            isCanThePlayerCastQuestionMark = false;
+            StartCoroutine(TimerAndThenOpenAndCloseBracket());
+        }
     }
     // Interface End
+
+    // The IEnumerator
+    private int TheAmountOfSeconds = 4;
+    private IEnumerator TimerAndThenOpenAndCloseBracket() {
+        yield return new WaitForSeconds(TheAmountOfSeconds);
+        isCanThePlayerCastQuestionMark = true;
+    }
+    
 
     private void EndTurn()
     {
@@ -42,9 +58,10 @@ public class  ActionHandler : MonoBehaviour
         Gun,
     }
     private void CalculateConclusion() {
-        if (enemyAction == Gesture.Gun) {
+        if (enemyAction == Gesture.Gun)
+        {
             if (playerAction == Gesture.Gun) { print("Begin Shootout"); }
-            print("trigger quick action ecentr tune, respond to gun in time with middle finger");
+            else { print("trigger quick action ecentr tune, respond to gun in time with middle finger"); }
         }
         else
         {
@@ -82,7 +99,6 @@ public class  ActionHandler : MonoBehaviour
         // Fuckass function
         int decision = Random.Range(0, Gesture.GetNames(typeof(Gesture)).Length); 
         Gesture decisionGesture = (Gesture)decision;
-        print(decisionGesture);
         return decisionGesture;
     }
 }

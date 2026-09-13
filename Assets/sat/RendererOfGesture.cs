@@ -28,19 +28,19 @@ public class RendererOfGesture : MonoBehaviour
 
         switch (gesture) {
             case 0:
-                Destroy(Instantiate(Rock, targetSide.transform), 2);
+                Destroy(Instantiate(Rock, targetSide.transform), 1);
                 break;
             case 1:
-                Destroy(Instantiate(Paper, targetSide.transform), 2);
+                Destroy(Instantiate(Paper, targetSide.transform), 1);
                 break;
             case 2:
-                Destroy(Instantiate(Scissors, targetSide.transform), 2);
+                Destroy(Instantiate(Scissors, targetSide.transform), 1);
                 break;
             case 3:
-                Destroy(Instantiate(MiddleFinger, targetSide.transform), 2);
+                Destroy(Instantiate(MiddleFinger, targetSide.transform), 1);
                 break;
             case 4:
-                Destroy(Instantiate(Gun, targetSide.transform), 2);
+                Destroy(Instantiate(Gun, targetSide.transform), 1);
                 break;
             default:
                 Application.Quit();
