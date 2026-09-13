@@ -13,11 +13,11 @@ public class PlayerFPSinput : MonoBehaviour
         movementInput = InputSystem.actions.FindAction("Move");
         attackInput = InputSystem.actions.FindAction("Attack");
     }
-    void FixedUpdate()
+    void Update()
     {
         if (movementInput.IsPressed())
         {
-            Vector2 moveValue = movementInput.ReadValue<Vector2>() * Time.fixedDeltaTime;
+            Vector2 moveValue = movementInput.ReadValue<Vector2>() * Time.deltaTime;
             float forwardandbackwards = moveValue.y;
             float sidetoside = moveValue.x;
 
