@@ -58,12 +58,12 @@ public class AiFPSinput : MonoBehaviour
             targetDir.y = 0;
             aimTargetPos.y = 0;
             float curAngle = Vector3.SignedAngle(targetDir, transform.forward, Vector3.up);
-            if (curAngle > 2)
+            if (curAngle > 1)
             {
                 fuck.Rotate(-1 * Time.fixedDeltaTime);
             } else if ( curAngle < -1)
             {
-                fuck.Rotate(2 * Time.fixedDeltaTime);
+                fuck.Rotate(1 * Time.fixedDeltaTime);
             } else
             {
                 fuck.Shoot();

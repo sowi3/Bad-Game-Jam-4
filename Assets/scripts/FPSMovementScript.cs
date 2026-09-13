@@ -41,7 +41,9 @@ public class FPSMovementScript : MonoBehaviour
                 Vector3 spawnPos = transform.position + transform.right * 0.25f + transform.up * 0.4f;
                 var newBullet = Instantiate(BOLLET, spawnPos, transform.rotation);
                 float bulletVelocity = Random.Range(10f, 100f);
-                newBullet.GetComponent<Rigidbody>().linearVelocity = transform.forward * bulletVelocity;
+                float bulletSpread = Random.Range(-1f, 1f);
+
+                newBullet.GetComponent<Rigidbody>().linearVelocity = transform.forward * bulletVelocity + transform.right * bulletSpread;
                 Destroy(newBullet, 4);
                 var soundClip = shootSounds[Random.Range(0, shootSounds.Length)];
                 PlaySoundEffect(soundClip);

@@ -15,7 +15,7 @@ public class BOOLETKILLSYOU : MonoBehaviour
 
     IEnumerator Activate()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         collider.enabled = true;
     }
     void OnTriggerEnter(Collider other)
