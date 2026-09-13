@@ -48,7 +48,8 @@ public class FPSMovementScript : MonoBehaviour
                 newBullet.GetComponent<Rigidbody>().linearVelocity = transform.forward * bulletVelocity + transform.right * bulletSpread;
                 Destroy(newBullet, 4);
                 var soundClip = shootSounds[Random.Range(0, shootSounds.Length)];
-                PlaySoundEffect(soundClip);
+                float pitch = Random.Range(1f,1.2f);
+                PlaySoundEffect(soundClip, pitch);
                 attackCooldown = 0.05f;
             }
         }
