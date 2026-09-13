@@ -39,17 +39,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: b39f6774689466e48af4ad8ac641cb7c, type: 3}
+        m_Texture: {fileID: 2800000, guid: e0bb06dc44fcf53449c6f079c6297bdc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b39f6774689466e48af4ad8ac641cb7c, type: 3}
+        m_Texture: {fileID: 2800000, guid: e0bb06dc44fcf53449c6f079c6297bdc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _BaseColor: {r: 0.12578613, g: 0.12578613, b: 0.12578613, a: 1}
-    - _Color: {r: 0.1257861, g: 0.1257861, b: 0.1257861, a: 1}
+    - _BaseColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
+    - _Color: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
