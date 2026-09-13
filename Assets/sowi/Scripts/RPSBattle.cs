@@ -38,13 +38,11 @@ public class RPSBattle : MonoBehaviour
 
     public void DamageBro(int value) {
         enemyHealth -= value;
-        print(enemyHealth);
         if (enemyHealth <= 0) EndBattle();
     }
 
     public void DamagePlayer(int value) {
         playerHealth -= value;
-        print(playerHealth);
         if (playerHealth <= 0) Application.Quit();
     }
 
