@@ -1,7 +1,5 @@
 
-using TreeEditor;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class FPSMovementScript : MonoBehaviour
 {

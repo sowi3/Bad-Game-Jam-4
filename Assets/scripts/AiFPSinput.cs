@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class AiFPSinput : MonoBehaviour
@@ -8,6 +7,8 @@ public class AiFPSinput : MonoBehaviour
     private Transform aimTarget;
     private Vector3 moveTarget;
     private States state;
+
+    public GameObject popup;
 
     private enum States
     {
@@ -79,6 +80,8 @@ public class AiFPSinput : MonoBehaviour
         }
     }
 
+//Also useless code 
+//ignore pls
     void FindSomewhereToWalkTo()
     {
         Vector3 target = new Vector3(0,0,0);
@@ -86,7 +89,6 @@ public class AiFPSinput : MonoBehaviour
         target.z = Random.Range(-10f,10f);
         moveTarget = target + transform.position;
     }
-
 
     bool scanning;
     IEnumerator ScanForEnemy()
@@ -100,7 +102,7 @@ public class AiFPSinput : MonoBehaviour
         scanning = false;
     }
 
-    const float maxViewDistance = 50f;
+    const float maxViewDistance = 60f;
 
     Transform GetNearestEnemy(GameObject[] enemies)
     {
@@ -117,6 +119,10 @@ public class AiFPSinput : MonoBehaviour
             }
         }
         return testedClosestEnemy;
+    }
 
+    void OnDestroy()
+    {
+        Instantiate(popup, transform.position, Quaternion.identity);
     }
 }

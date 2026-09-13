@@ -1107,6 +1107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AiFPSinput
   fuck: {fileID: 183246029}
+  popup: {fileID: 23829279623781513, guid: 21034a34b8eca614785b0e39829287c0, type: 3}
 --- !u!1 &195724617
 GameObject:
   m_ObjectHideFlags: 0
