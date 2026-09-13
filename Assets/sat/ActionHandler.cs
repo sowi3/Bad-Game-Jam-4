@@ -60,7 +60,7 @@ public class  ActionHandler : MonoBehaviour
     private void CalculateConclusion() {
         if (enemyAction == Gesture.Gun)
         {
-            if (playerAction == Gesture.Gun) { print("Begin Shootout"); }
+            if (playerAction == Gesture.Gun) { RPSScript.BeginShootout(); }
             else { print("trigger quick action ecentr tune, respond to gun in time with middle finger"); }
         }
         else

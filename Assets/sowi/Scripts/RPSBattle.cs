@@ -1,6 +1,6 @@
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RPSBattle : MonoBehaviour
 {
@@ -38,13 +38,11 @@ public class RPSBattle : MonoBehaviour
 
     public void DamageBro(int value) {
         enemyHealth -= value;
-        print(enemyHealth);
         if (enemyHealth <= 0) EndBattle();
     }
 
     public void DamagePlayer(int value) {
         playerHealth -= value;
-        print(playerHealth);
         if (playerHealth <= 0) Application.Quit();
     }
 
@@ -68,5 +66,23 @@ public class RPSBattle : MonoBehaviour
         }
         lastEnemy = i;
         return Instantiate(enemies[i], enemyAnchor.transform);
+    }
+
+    public void BeginShootout() {
+        SceneManager.LoadScene("FPS", LoadSceneMode.Additive);
+        Scene FPSScene = SceneManager.GetSceneByName("FPS");
+        Sprite oldSprite = _enemy.GetComponent<SpriteRenderer>().sprite;
+
+        StartCoroutine(ShootoutStage2(FPSScene, oldSprite));
+    }
+
+    private IEnumerator ShootoutStage2(Scene FPSScene, Sprite oldSprite) {
+        while (!FPSScene.isLoaded) { yield return null; }
+
+        SceneManager.SetActiveScene(FPSScene);
+        SceneManager.UnloadSceneAsync("MainWorld");
+
+        GameObject ThreeDEnemy = GameObject.Find("Enemy");
+        ThreeDEnemy.transform.Find("hackerman_0").GetComponent<SpriteRenderer>().sprite = oldSprite;
     }
 }
