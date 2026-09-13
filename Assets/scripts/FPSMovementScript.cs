@@ -15,6 +15,7 @@ public class FPSMovementScript : MonoBehaviour
     public GameObject audioEmitter;
     private float attackCooldown;
     public Animator _animator;
+    public ParticleSystem _particleEmitter;
 
     private int ammo = 25;
 
@@ -38,6 +39,7 @@ public class FPSMovementScript : MonoBehaviour
                 attacking = true;
                 _animator.SetBool("Shooting", true);
                 ammo--;
+                _particleEmitter.Play();
                 Vector3 spawnPos = transform.position + transform.right * 0.25f + transform.up * 0.4f;
                 var newBullet = Instantiate(BOLLET, spawnPos, transform.rotation);
                 float bulletVelocity = Random.Range(10f, 100f);
